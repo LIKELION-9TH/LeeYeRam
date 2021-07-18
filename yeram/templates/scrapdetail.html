@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<br><br>
+  <div class="container">
+    <h5>{{scrapdetails.title}}</h5>
+    <h6>{{scrapdetails.author}}</h6>
+    <br><p>{{scrapdetails.body}}</p>
+    <button type="button" class="btn btn-outline-dark" onclick="location.href='scrapedit/'"> Edit </button>
+    <button type="button" class="btn btn-outline-dark" onclick="location.href='scrapdelete/'"> Delete </button>
+
+  </div>
+
+{% endblock %}
