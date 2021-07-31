@@ -3,12 +3,138 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .site2-container {
+        padding: 0;
+        margin: auto;
+        max-width: calc(100% -50px);
+    }
+
+    .teem-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .teem-image {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .teem-image img {
+        max-height: 100%;
+        width: auto;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .teem-content img {
+        max-width: 10%;
+        height: auto;
+        border-radius: 15px 15px 0 0;
+        vertical-align: middle;
+    }
+
+    .teem-content {
+        font-size: 13px;
+        margin: 10px;
+        align-content: center;
+        vertical-align: middle;
+    }
+
+
+    .teem-card {
+        background: white;
+        transition: 0.3s;
+    }
+
+    .teem-card {
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    @media screen {
+        .site-container {
+            max-width: 3000px;
+        }
+
+        .site2-container {
+            max-width: 3000px;
+        }
+
+        .teem-card {
+            display: grid;
+            grid-template-rows: 306px 1fr;
+        }
+    }
+</style>
+
 <br>
 <h1>Favorit Music</h1>
 
 <p> 애정하는 음악 </p>
 <br>
 
+<div class="teem-container">
+    <teem class="teem-card">
+        <figure class="teem-image">
+            <image src="{% static 'm1.jpg'%}" alt='' />
+        </figure>
+
+        <div class="teem-content">
+            <h7>새소년 - 난춘</h7>
+        </div>
+    </teem>
+
+    <teem class="teem-card">
+        <figure class="teem-image">
+            <image src="{% static 'm2.jpg'%}" alt='' />
+        </figure>
+        <div class="teem-content">
+            <h7>선우정아 - 도망가자</h7>
+        </div>
+    </teem>
+
+    <teem class="teem-card">
+        <figure class="teem-image">
+            <image src="{% static 'm3.jpg'%}" alt='' />
+        </figure>
+
+        <div class="teem-content">
+            <h7>Colde - Your Dog Loves You</h7>
+        </div>
+    </teem>
+
+    <teem class="teem-card">
+        <figure class="teem-image">
+            <image src="{% static 'm4.jpg'%}" alt='' />
+        </figure>
+        <div class="teem-content">
+            <h7>혁오 - 톰보이</h7>
+        </div>
+    </teem>
+    
+    <teem class="teem-card">
+        <figure class="teem-image">
+            <image src="{% static 'm5.jpg'%}" alt='' />
+        </figure>
+    
+        <div class="teem-content">
+            <h7>백예린 - 0310</h7>
+        </div>
+    </teem>
+
+    <teem class="teem-card">
+        <figure class="teem-image">
+            <image src="{% static 'm6.jpg'%}" alt='' />
+        </figure>
+    
+        <div class="teem-content">
+            <h7>offonoff - Bath</h7>
+        </div>
+    </teem>
+</div>
 
 
 {% endblock %}

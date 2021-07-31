@@ -25,13 +25,13 @@ urlpatterns = [
     path('music/', views.music, name="music"),
     path('photo/', views.photo, name="photo"),
     path('scrap/', views.scrap, name="scrap"),
-    path('scrap/<int:yeram_id>/', views.scrapdetail, name="scrapdetail"),
-    path('scrap/scrapnew/', views.scrapnew, name="scrapnew"),
-    path('scrap/scrapcreate/', views.scrapcreate, name="scrapcreate"),
-    path('scrap/<int:yeram_id>/scrapedit/', views.scrapedit, name="scrapedit"),
-    path('scrap/<int:yeram_id>/scrapupdate/ ', views.scrapupdate, name='scrapupdate'),
-    path('scrap/<int:yeram_id>/scrapdelete/ ',
-         views.scrapdelete, name='scrapdelete'),
+    path('scrap/<int:yeram_id>/', views.detail, name="detail"),
+    path('scrap/new/', views.new, name="new"),
+    path('scrap/create/', views.create, name="create"),
+    path('scrap/<int:yeram_id>/edit/', views.edit, name="edit"),
+    path('scrap/<int:yeram_id>/update/ ', views.update, name='update'),
+    path('scrap/<int:yeram_id>/delete/ ',
+         views.delete, name='delete'),
 
 ]
 

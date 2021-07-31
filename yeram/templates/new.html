@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<h1>Scrap</h1>
+
+<p> 스크랩 추가 </p>
+
+<br>
+
+<div>
+  <form action="{% url 'create'%}" method="post">
+    {%csrf_token%}
+    <h6> Title </h6>
+    <input type="text" name="title">
+    <br><br>
+    <h6> Writer </h6>
+    <input type="text" name="author">
+    <br><br>
+    <h6> Content </h6>
+    <textarea cols=80 rows=25 name="body"></textarea>
+    <br><br>
+    <input class="btn btn-outline-dark" type="submit" value="Add">
+  </form>
+</div>
+
+
+
+{% endblock %}

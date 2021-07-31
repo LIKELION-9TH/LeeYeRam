@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<br><br>
+  <div class="container">
+    <h5>{{details.title}}</h5>
+    <h6>{{details.author}}</h6>
+    <br><p>{{details.body}}</p>
+    <button type="button" class="btn btn-outline-dark" onclick="location.href='edit/'"> Edit </button>
+    <button type="button" class="btn btn-outline-dark" onclick="location.href='delete/'"> Delete </button>
+
+  </div>
+
+{% endblock %}

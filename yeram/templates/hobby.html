@@ -1,9 +1,31 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+<style>
+.carousel-inner {
+box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+border-radius: 15px
+}
+</style>
+
+
 <br>
 <h1>Hobby</h1>
     
 <p> 쉴 때 하는 일 </p>
 <br>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'h1.png'%}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>사진 촬영</h5>
+                <p>Photography 페이지에서 촬영한 사진들을 구경하세요!</p>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
 {% endblock %}

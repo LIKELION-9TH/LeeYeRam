@@ -120,14 +120,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFiles_DIRS = [
+STATICFILES_DIRS = [
    os.path.join(BASE_DIR, 'yeram', 'static')
 ]
-#static 파일이 현대 어디에 있는지를 씀
+#static 파일이 현재 어디에 있는지를 씀
 
-STATIC_ROOT = [
-    os.path.join(BASE_DIR, 'static')
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #static 파일이 어디로 모일 것인지를 씀
 
 # Default primary key field type
